@@ -1,35 +1,32 @@
-<?php
-if(isset($_GET['nome'])){
-    $txtnome = $_GET['nome'];
-}
-?>
+   <?php
+        require_once('funcoes.php');
+    ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu primeiro PHP</title>
-    <link rel="stylesheet" href="css/style.css"
-    <link rel="stylesheet" href="css/reset.css"
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <?php
-    $nome = 'José';
-    $idade = 19;
-    $nome = 25;
-    echo ($nome);
+
     ?>
-    <a href="https://www.sp.senac.br/itaquera">?php echo($nome).'Pao'; ?></a>
-    <form action="#" method="get">
-        <input type="text" name="nome">
-        <button type="submit" name="btn"></button>
-        <p>
-            <?php
-            if(isset($txtnome)){
-                echo($txtnome);
-            }
-            ?>
-        </p>
-    </form>
+<div class="container">
+    <?php
+        //$idade = 2022 - 2003; 
+        //echo '<h1>Fala zé idade '.$idade.'</h1>';
+        //echo somar ()."<br/>";
+        //somarIdade (25,30,26,28);
+        //echo (1500 - calcularComissao(1500,14.58));
+        $montante = calcularMontante(1000,2.98,12);
+        $parcela = number_format(($montante/12),2,',','.');
+        echo '12 parcelas de R$'.$parcela.'<br/>';
+        echo 'Valor total R$'.number_format(($montante),2,',','.');
+    ?>
+</div>
+
+
 </body>
 </html>
