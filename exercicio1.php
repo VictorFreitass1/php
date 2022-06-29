@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Exercicio</title>
     <link rel="stylesheet" href="css/exercicio1.css">
 </head>
 <?php  
@@ -18,6 +18,12 @@
 <p> Taxa de juros <input type="text" name="taxajuros"></p> 
 <p> Numero de parcelas<input type="text" name="numeroparcelas"></p>
 <button type="submit" name="btn">Calcular</button> 
+<?php  
+if(isset($_GET['valorcapital'])){ 
+    $txtnome = $_GET['taxajuros']; 
+} 
+
+?> 
     
 </body>
 </html>
